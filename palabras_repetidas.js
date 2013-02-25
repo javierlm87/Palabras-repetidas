@@ -5,7 +5,7 @@ $(document).ready(function() {
 });
 
 function generateOutput(contents) {
-  return contents.replace(/\b([a-z_A-Z]\w)(\s+)\1\b/ig,'<span class="repeated">$1</span>$2');
+  return contents.replace(/\b([a-z_A-Z]\w*)(\s+)\1\b/ig,'<span class="repeated">$1</span>$2');
 }
 
 function calculate(evt) {
@@ -25,7 +25,7 @@ function calculate(evt) {
     }
     r.readAsText(f);
   } else { 
-    alert("Failed to load file");
+    alert("Fallo al cargar el fichero");
   }
 }
 
